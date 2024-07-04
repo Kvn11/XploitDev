@@ -4,10 +4,8 @@
 sudo apt update
 sudo apt install -y \
 python3 python3-pip \
-zsh \
 bc binutils bison dwarves flex gcc git gnupg2 gzip libelf-dev libncurses5-dev libssl-dev make openssl pahole perl-base rsync tar xz-utils \
 tmux \
-vim \
 gdb
 
 # Setup qemu:
