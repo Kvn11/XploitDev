@@ -13,7 +13,4 @@ gdb
 
 # Setup qemu:
 sudo apt update
-sudo apt install qemu qemu-kvm virt-manager bridge-utils
-sudo usermod -aG libvirt $USER
-sudo usermod -aG libvirt-kvm $USER
-sudo usermod -aG libvirt-qemu $USER
+sudo apt -y install qemu qemu-kvm bridge-utils
