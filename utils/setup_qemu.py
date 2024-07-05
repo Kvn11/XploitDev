@@ -65,6 +65,7 @@ def configure_rootfs(rootfs_path, ssh_pub, modules_path, root_pass="root", user_
     ])
     
     result = subprocess.run(command, capture_output=True, text=True)
+    return result
 
 def main(directory, ssh_key, modules_path):
     if not create_directory(directory):
@@ -90,7 +91,7 @@ def main(directory, ssh_key, modules_path):
         logger.success("Images has been configured successfully.")
     else:
         logger.error("Failed to configure image.")
-        print(result.stderr)
+        print(status.stderr)
     
     
 if __name__ == "__main__":
@@ -124,7 +125,7 @@ if __name__ == "__main__":
                 logger.success("Image has been configued successfully.")
             else:
                 logger.error("Failed to configure image.")
-                print(result.stderr)
+                print(status.stderr)
             
     
     main(
